@@ -16,7 +16,6 @@ adoption
 ## VUE BASICS
 ---
 ### Let's start with the DOM
----
 
 ```html
 <html>
@@ -24,11 +23,33 @@ adoption
 <div id="app">
 {{ message }} {{ other message }}
 </div>
-<!-- development version, includes helpful console warning
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
+<!-- development version, includes helpful console warning -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
 ```
 ---
 ### Now let's create our Vue app !
+
+```js
+var app = new Vue({
+el: '#app',
+data: {
+message: 'Hello Vue!',
+otherMessage: 'other message'
+}
+})
+```
+el - HTML element where the app is rendered
+data - where the data is
+
+---
+# Hello Vue
+---
+
+### What happened here?
+- We instantiated an App component to create our Vue app  `new Vue({ ... definition })`
+- We used interpolation {{}} - to show data
+
+---
