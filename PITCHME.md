@@ -23,8 +23,8 @@ adoption
 <div id="app">
 {{ message }} {{ other message }}
 </div>
-<!-- development version, includes helpful console warning -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
 <script src="app.js"></script>
 </body>
 </html>
@@ -34,22 +34,67 @@ adoption
 
 ```js
 var app = new Vue({
-el: '#app',
-data: {
-message: 'Hello Vue!',
-otherMessage: 'other message'
-}
+  el: '#app',
+  data: {
+    message: 'Hello Spritle!',
+    otherMessage: 'other message'
+  }
 })
 ```
 el - HTML element where the app is rendered
+
 data - where the data is
 
 ---
-# Hello Vue
+# Hello Spritle!
 ---
 
 ### What happened here?
-- We instantiated an App component to create our Vue app  `new Vue({ ... definition })`
-- We used interpolation {{}} - to show data
+
+- We instantiated an App component to create our Vue app  ```new Vue({ ... definition })```
+- We used interpolation {{ }} - to show data
+
+---
+
+### How do we render a list?
+
+---
+
+- Use the structural directive v-for
+- Add a list to our data property
+
+---
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Spritle!',
+    items: [{ id: 1, title: 'Bingo' }, { id: 2, title: 'Pringles'}]
+  }
+})
+```
+---
+### *v-for* renders list
+
+```js
+  <div v-for="item in items">
+    {{item.title}}
+  </div>
+```
+---
+
+### How do we do Conditional rendering?
+
+---
+
+```js
+<div v-if="hasError">
+  {{ error }}
+</div>
+<div v-else>
+  All good here
+</div>
+```
 
 ---
