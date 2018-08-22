@@ -137,5 +137,160 @@ methods: {
   }
 }
 ```
+```html
 <button v-on:click="save">Save</button>
+```
 
+---
+
+ So we learned the Vue basics on creating an app, structural directives and so on. Can we wind up the session already?
+
+---
+
+ Oops, we need to learn about **Components** first
+
+---
+
+### Components
+
+---
+
+#### Vue.component()
+
+```js
+  Vue.component('componentName', {
+  ... object definition
+  })
+```
+---
+
+```js
+Vue.component('counter', {
+  template: `
+    <div>
+      {{this.count}}
+      <button v-on:click="adder">Increase</button>
+    </div>
+  `,
+  data() { 
+    return {
+      count: 0 
+    } 
+  },
+  methods: {
+    adder () {
+      this.count++
+    }
+  }
+})
+```
+---
+
+### Component with a child component
+
+---
+
+```js
+Vue.component('parent', {
+  template: `
+    <div>
+    Parent: <child />
+    </div>
+  `
+})
+
+Vue.component('child', {
+  template: `
+    <div>
+    <strong>Child</strong>
+    </div>
+  `
+})
+```
+---
+
+Argh! Enough of these, can we jump to something interesting?
+
+---
+
+### CREATING COMPONENTS WITH ES6 MODULE/ VUE-CLI APPROACH
+
+---
+
+#### 1 file = 1 component
+
+Component consists of the following:
+- template - tag , this is where your HTML markup
+ lives
+- script - tag, this is where the component JS lives
+- style - tag , this is where the styles are defined
+
+---
+
+```html
+<template>
+  <div class="hello"><h1>{{ msg }}</h1></div>
+</template>
+<script>
+  export default {
+    name: 'HelloWorld',
+    data () { 
+      return {
+        msg: 'Hello Spritle' 
+      } 
+    }
+  }
+</script>
+<style scoped>
+  .hello {
+  padding: 10px;
+  }
+</style>
+```
+---
+
+How do we deal with child components?
+
+---
+
+To be able to use child component we need to:
+- import the child component
+- register it with its parent component
+
+---
+```js
+import Test from './Test.vue'
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Hello Spritle'
+    }
+  },
+  components: {
+    Test
+  }
+}
+```
+
+import - import module
+
+components - place child component here
+
+---
+
+```html
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <test></test>
+  </div>
+</template>
+```
+---
+
+# Questions?
+
+---
+
+# Thank you for your patience :)
