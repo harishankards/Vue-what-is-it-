@@ -60,7 +60,7 @@ data - where the data is
 
 ---
 
-- Use the structural directive v-for
+- Use the structural directive **v-for**
 - Add a list to our data property
 
 ---
@@ -75,9 +75,9 @@ var app = new Vue({
 })
 ```
 ---
-### *v-for* renders list
+### **v-for** renders list
 
-```js
+```html
   <div v-for="item in items">
     {{item.title}}
   </div>
@@ -88,7 +88,7 @@ var app = new Vue({
 
 ---
 
-```js
+```html
 <div v-if="hasError">
   {{ error }}
 </div>
@@ -98,3 +98,44 @@ var app = new Vue({
 ```
 
 ---
+
+### WORKING WITH FORM CONTROLS
+
+---
+
+**v-model** two-way binding
+
+```html
+<div id='example-3'>
+<input type="checkbox" id="Donatello" value="Donatello"
+v-model="checkedTurtles">
+<label for="Donatello">Donatello</label>
+<input type="checkbox" id="Michelangelo" value="Michelangelo"
+v-model="checkedTurtles">
+<label for="Michelangelo">Michelangelo</label>
+<input type="checkbox" id="Rafael" value="Rafael"
+v-model="checkedTurtles">
+<label for="Rafael">Rafael</label>
+<br>
+<span>Checked turtles: {{ checkedTurtles }}</span>
+</div>
+```
+
+---
+
+What about **Methods**?
+
+---
+
+```js
+data: {
+  newItem: ''
+},
+methods: {
+  save() {
+    console.log('value of input ' + this.newItem);
+  }
+}
+```
+<button v-on:click="save">Save</button>
+
