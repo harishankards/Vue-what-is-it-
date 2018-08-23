@@ -5,12 +5,13 @@ HARISHANKAR
 ---
 
 ## WHY SHOULD YOU CARE?
-- Vue.js 93000 stars on github, React 95000 stars on
-github, Angular 36000 stars on github AngularJS
-58000 stars on github
-- It's really easy, great documentation
-- The interest is there, now we are just waiting for
-adoption
+- Vue.js - 1,10,000 stars on github, React.js - 1,08,000 stars on github, Angular - 39,500 stars on github. --- **Oh come on?! Even a thing is this?**
+- It's really easy, great documentation --- **so?**
+- Flexibility. Because it’s JS. --- **So what? React et al has it.**
+- Very small in size. --- **How much, 100 KB? No. 18-21 KB. Wow right? No**
+- MVVM architecure. --- **Angular has it. Shut up dude!**
+- Combines the advantages of Angular and React.  
+
 
 ---
 ## VUE BASICS
@@ -110,9 +111,11 @@ var app = new Vue({
 <input type="checkbox" id="Donatello" value="Donatello"
 v-model="checkedTurtles">
 <label for="Donatello">Donatello</label>
+
 <input type="checkbox" id="Michelangelo" value="Michelangelo"
 v-model="checkedTurtles">
 <label for="Michelangelo">Michelangelo</label>
+
 <input type="checkbox" id="Rafael" value="Rafael"
 v-model="checkedTurtles">
 <label for="Rafael">Rafael</label>
@@ -127,6 +130,7 @@ What about **Methods**?
 
 ---
 
+script:
 ```js
 data: {
   newItem: ''
@@ -137,6 +141,7 @@ methods: {
   }
 }
 ```
+template:
 ```html
 <button v-on:click="save">Save</button>
 ```
@@ -231,6 +236,7 @@ Component consists of the following:
 <template>
   <div class="hello"><h1>{{ msg }}</h1></div>
 </template>
+
 <script>
   export default {
     name: 'HelloWorld',
@@ -241,6 +247,7 @@ Component consists of the following:
     }
   }
 </script>
+
 <style scoped>
   .hello {
   padding: 10px;
@@ -260,6 +267,7 @@ To be able to use child component we need to:
 ---
 ```js
 import Test from './Test.vue'
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -293,4 +301,4 @@ components - place child component here
 
 ---
 
-# Thank you for your patience :)
+ **Thank you for your patience :)**
