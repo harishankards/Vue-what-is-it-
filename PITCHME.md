@@ -51,7 +51,7 @@ data - where the data is
 
 ### What happened here?
 
-- We instantiated an App component to create our Vue app  ```new Vue({ ... definition })```
+- We instantiated an App component to create our Vue app  **_new Vue({ ... definition })_**
 - We used interpolation {{ }} - to show data
 
 ---
@@ -106,11 +106,10 @@ var app = new Vue({
 **v-model** two-way binding
 
 ```html
-<div id='example-3'>
-<input type="checkbox" id="name" 
-v-model="yourName">
-<br>
-<span>Your name: {{ yourName }}</span>
+<div>
+  <input id="name" v-model="yourName">
+  <br>
+  <span>Your name: {{ yourName }}</span>
 </div>
 ```
 
@@ -123,17 +122,17 @@ What about **Methods**?
 script:
 ```js
 data: {
-  newItem: ''
+  counter: 0
 },
 methods: {
-  save() {
-    console.log('value of input ' + this.newItem);
+  increase() {
+    this.counter++
   }
 }
 ```
 template:
 ```html
-<button v-on:click="save">Save</button>
+<button v-on:click="increase">Increase</button>
 ```
 
 ---
