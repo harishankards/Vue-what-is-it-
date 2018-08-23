@@ -10,7 +10,7 @@ HARISHANKAR
 - Flexibility. Because it’s JS. --- **So what? React et al has it.**
 - Very small in size. --- **How much, 100 KB? No. 18-21 KB. Wow right? No**
 - MVVM architecure. --- **Angular has it. Shut up dude!**
-- Combines the advantages of Angular and React.  
+- Combines the peculiar features of all the older frameworks.  
 
 
 ---
