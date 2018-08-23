@@ -20,14 +20,14 @@ HARISHANKAR
 
 ```html
 <html>
-<body>
-<div id="app">
-{{ message }} {{ other message }}
-</div>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
-</script>
-<script src="app.js"></script>
-</body>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+  </script>
+  <script src="app.js"></script>
+  </body>
 </html>
 ```
 ---
@@ -37,8 +37,7 @@ HARISHANKAR
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Spritle!',
-    otherMessage: 'other message'
+    message: 'Hello Spritle!'
   }
 })
 ```
@@ -108,19 +107,10 @@ var app = new Vue({
 
 ```html
 <div id='example-3'>
-<input type="checkbox" id="Donatello" value="Donatello"
-v-model="checkedTurtles">
-<label for="Donatello">Donatello</label>
-
-<input type="checkbox" id="Michelangelo" value="Michelangelo"
-v-model="checkedTurtles">
-<label for="Michelangelo">Michelangelo</label>
-
-<input type="checkbox" id="Rafael" value="Rafael"
-v-model="checkedTurtles">
-<label for="Rafael">Rafael</label>
+<input type="checkbox" id="name" 
+v-model="yourName">
 <br>
-<span>Checked turtles: {{ checkedTurtles }}</span>
+<span>Your name: {{ yourName }}</span>
 </div>
 ```
 
